@@ -1,7 +1,7 @@
 def square(n):
-    """Returns the square of a number."""
+    
     return n * n
 
 def is_even(n):
-    """Returns True if a number is even, False otherwise."""
+    
     return n % 2 == 0
