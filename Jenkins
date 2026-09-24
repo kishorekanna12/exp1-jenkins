@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Pulls code automatically from your configured GitHub repository
+                
                 checkout scm
             }
         }
