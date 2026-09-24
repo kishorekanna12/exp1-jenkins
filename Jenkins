@@ -1,0 +1,24 @@
+pipeline {
+    agent { label 'Windows' } // Targets your Windows Agent
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Pulls code automatically from your configured GitHub repository
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                bat 'pytest'
+            }
+        }
+    }
+}
